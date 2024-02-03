@@ -140,6 +140,9 @@ align-self: flex-start;
     cursor: pointer;
 }
 @media all and (min-width:580px){
+    .landing-section{
+        background-size: cover;
+    }
     .card-container{
         padding:30px;
         display: flex;
