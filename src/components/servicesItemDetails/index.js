@@ -1,6 +1,7 @@
 import { Component } from 'react'
 import Header from '../header'
 import { ThreeCircles } from 'react-loader-spinner';
+import Url from "../../config";
 import './index.css'
 
 
@@ -33,7 +34,7 @@ class ServiceItemDetails extends Component{
       method: "GET",
     };
 
-    const apiUrl = `http://localhost:3001/services/${id}`;
+    const apiUrl = `${Url}/services/${id}`;
     console.log(apiUrl,'api url')
     const response = await fetch(apiUrl, options);
     console.log(response,'response')

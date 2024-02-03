@@ -2,6 +2,7 @@ import { Component } from "react";
 
 import { ThreeCircles } from "react-loader-spinner";
 import Header from "../header";
+import Url from "../../config";
 import BlogItems from "../BlogItems";
 
 import "./index.css";
@@ -30,7 +31,7 @@ class Blog extends Component{
     getData = async () => {
         const { search_text } = this.state;
         this.setState({ apiStatus: status.in_progress });
-        const url = `http://localhost:3001/blogs`;
+        const url = `${Url}/blogs`;
         console.log(url, "url");
         const options = {
           method: "GET",

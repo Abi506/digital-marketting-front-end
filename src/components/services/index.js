@@ -1,6 +1,7 @@
 import { Component } from 'react'
 import Header from '../header'
 import { ThreeCircles } from 'react-loader-spinner';
+import Url from "../../config";
 import {Link} from 'react-router-dom';
 import './index.css'
 
@@ -30,7 +31,7 @@ class Services extends Component{
     getData = async () => {
         const { search_text } = this.state;
         this.setState({ apiStatus: status.in_progress });
-        const url = `http://localhost:3001/services`;
+        const url = `${Url}/services`;
         console.log(url, "url");
         const options = {
           method: "GET",

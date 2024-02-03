@@ -1,7 +1,7 @@
 import { Component } from "react";
 import { ThreeCircles } from "react-loader-spinner";
 import Header from "../header";
-
+import Url from "../../config";
 import "./index.css";
 
 const status = {
@@ -33,7 +33,7 @@ class BlogItemDetails extends Component{
       method: "GET",
     };
 
-    const apiUrl = `http://localhost:3001/blogs/${id}`;
+    const apiUrl = `${Url}/blogs/${id}`;
     console.log(apiUrl,'api url')
     const response = await fetch(apiUrl, options);
     console.log(response,'response')
