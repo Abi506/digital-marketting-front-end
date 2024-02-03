@@ -5,6 +5,7 @@ import Blog from './components/Blog'
 import BlogItemDetails from "./components/BlogItemDetails";
 import Services from './components/services'
 import ServiceItemDetails from "./components/servicesItemDetails";
+import About from "./components/about";
 
 
 const App=()=>{
@@ -15,6 +16,7 @@ const App=()=>{
       <Route exact path='/blogs/:id/' component={BlogItemDetails}/>
       <Route exact path='/services/' component={Services} />
       <Route exact path='/services/:id/' component={ServiceItemDetails}/>
+      <Route exact path='/about-us/' component={About}/>
     </Switch>
   )
 }
