@@ -1,5 +1,5 @@
 import Header from '../header'
-
+import {Link} from 'react-router-dom'
 import './index.css'
 
 const About=()=>(
@@ -69,7 +69,9 @@ const About=()=>(
 </p>
 <div className='about-growth-button-container'>
     <button type='button' className='about-grwoth-button-container'> 
+    <Link to='/contact/' className='common-styles'>
     Empower Your Business 
+    </Link>
     </button>
 
 </div>

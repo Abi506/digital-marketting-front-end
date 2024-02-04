@@ -86,6 +86,22 @@ class Blog extends Component{
 
       );
 
+      renderSuccess=()=>{
+        const{data}=this.state
+        return(
+        <div className="blogs-container">
+        <div className="blog-landing-image-container">
+            <h1 className="blog-landing-heading">BLOG</h1>
+            <p className="blog-landing-para">Non-stop Knowlegde&inspiration</p>
+            </div>
+            <div className="blogs-items-container">
+                <BlogItems details={data}/>
+
+            </div>
+    </div>
+      )
+        }
+
       renderFinal = () => {
         const { apiStatus } = this.state;
         switch (apiStatus) {
@@ -103,16 +119,7 @@ class Blog extends Component{
         return(
             <>
             <Header/>
-            <div className="blogs-container">
-                <div className="blog-landing-image-container">
-                    <h1 className="blog-landing-heading">BLOG</h1>
-                    <p className="blog-landing-para">Non-stop Knowlegde&inspiration</p>
-                    </div>
-                    <div className="blogs-items-container">
-                        <BlogItems details={data}/>
-
-                    </div>
-            </div>
+            <div>{this.renderFinal()}</div>
             </>
         )
       }

@@ -91,6 +91,39 @@ class Services extends Component{
 
       );
 
+      renderSuccess=()=>{
+        const {data}=this.state 
+
+        return(
+                <div className='services-container'>
+                  <div className='services-page-landing-container'>
+                            <h1 className='services-page-heading-landing'>SERVICES</h1>
+                            <p>DIGITAL MARKETING AGENCY</p>
+                        </div>
+                        <div className='services-container'>
+                            <h1 className='services-card-heading'>DIGITAL MARKETING SERVICES</h1>
+                            <p className='services-card-para'>We invest time and energy in every client to ensure we understand their business and industry. This will help us create a custom digital marketing strategy that delivers a return on investment.</p>
+                            <ul className='services-list'>
+                                {
+                                    data.map(each=>(
+                                        <Link to={`/services/${each.id}`} className='nav-link'>
+                                        <li key={each.id} className='each-services-service-page-list'>
+                                            
+                                          <h1 className='services-page-heading'>{each.serviceType}</h1>
+                                          <p className='services-page-para'>{each.serviceOuterDescription}</p>
+                                        </li>
+                                        </Link>
+                                    ))
+                                }
+
+                            </ul>
+
+                        </div>
+                    </div>
+
+        )
+      }
+
       renderFinal = () => {
         const { apiStatus } = this.state;
         switch (apiStatus) {
@@ -109,33 +142,7 @@ class Services extends Component{
         return(
             <>
             <Header/>
-            <div className='services-container'>
-                <div className='services-page-landing-container'>
-                    <h1 className='services-page-heading-landing'>SERVICES</h1>
-                    <p>DIGITAL MARKETING AGENCY</p>
-                </div>
-                <div className='services-container'>
-                    <h1 className='services-card-heading'>DIGITAL MARKETING SERVICES</h1>
-                    <p className='services-card-para'>We invest time and energy in every client to ensure we understand their business and industry. This will help us create a custom digital marketing strategy that delivers a return on investment.</p>
-                    <ul className='services-list'>
-                        {
-                            data.map(each=>(
-                                <Link to={`/services/${each.id}`} className='nav-link'>
-                                <li key={each.id} className='each-services-service-page-list'>
-                                    
-                                        <h1 className='services-page-heading'>{each.serviceType}</h1>
-                                        <p className='services-page-para'>{each.serviceOuterDescription}</p>
-                                    
-
-                                </li>
-                                </Link>
-                            ))
-                        }
-
-                    </ul>
-
-                </div>
-            </div>
+            <div>{this.renderFinal()}</div>
             </>
         )
       }

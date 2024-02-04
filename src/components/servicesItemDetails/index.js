@@ -1,4 +1,5 @@
 import { Component } from 'react'
+import {Link} from 'react-router-dom'
 import Header from '../header'
 import { ThreeCircles } from 'react-loader-spinner';
 import Url from "../../config";
@@ -88,7 +89,7 @@ class ServiceItemDetails extends Component{
             <div className='request-container-services'>
                 <h1 className='request-heading-services'>Request a free consultation!</h1>
                 <div className='request-services-button-container'>
-                    <button type='button' className='request-services-button'>GET IN TOUCH</button>
+                    <button type='button' className='request-services-button'> <a href="/contact/" className='common-styles'>GET IN TOUCH</a></button>
 
                 </div>
 

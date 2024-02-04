@@ -51,7 +51,7 @@ const Home=()=>(
         <h2 className='landing-content-end'>DIGITAL MARKETTING </h2>
         <div className='landing-section-button-container'>
             <button type='button' className='landding-section-button'>
-                LET'S TALK DIGITAL 
+            <a href="contact" className='common-styles'>LET'S TALK DIGITAL </a>
             </button>
 
         </div>
@@ -89,7 +89,7 @@ const Home=()=>(
         </ul>
         <div className='services-section-button-container'>
             <button type='button' className='services-section-button'>
-                LET'S WORK TOGETHER
+                <a href="contact" className='common-styles'>LET'S WORK TOGETHER</a>
             </button>
 
         </div>

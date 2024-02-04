@@ -6,6 +6,7 @@ import BlogItemDetails from "./components/BlogItemDetails";
 import Services from './components/services'
 import ServiceItemDetails from "./components/servicesItemDetails";
 import About from "./components/about";
+import Contact from "./components/contact";
 
 
 const App=()=>{
@@ -17,6 +18,7 @@ const App=()=>{
       <Route exact path='/services/' component={Services} />
       <Route exact path='/services/:id/' component={ServiceItemDetails}/>
       <Route exact path='/about-us/' component={About}/>
+      <Route exact path='/contact/' component={Contact}/>
     </Switch>
   )
 }
