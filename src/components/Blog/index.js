@@ -61,9 +61,9 @@ class Blog extends Component{
         <div className="loader-container">
             <ThreeCircles type='TailSpin' color="#0284C7" height={50} width={50}/>
             <div className='message-container'>
-            <h1>This application is hosted in free version of Render</h1>
-            <p>The free version takes a cold restart so please wait for a minute to cold start</p>
-            </div>
+          <h1>This application is hosted in free version of Render</h1>
+          <p>The free version takes a cold restart so please wait for a minute to cold start</p>
+          </div>
         </div>
         )
       }
